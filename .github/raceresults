@@ -1,0 +1,16 @@
+def raceresults(yourtime, opponent1, opponent2, opponent3):
+    if yourtime < opponent1 and yourtime < opponent2 and yourtime < opponent3:
+        return 'Gold'
+    elif yourtime > opponent1 and yourtime > opponent2 and yourtime > opponent3:
+        return 'No medal'
+    elif yourtime < opponent1 and yourtime > opponent2 and yourtime > opponent3:
+        return 'Bronze'
+    elif yourtime > opponent1 and yourtime > opponent2 and yourtime < opponent3:
+        return 'Bronze'
+    elif yourtime > opponent1 and yourtime < opponent2 and yourtime > opponent3:
+        return 'Bronze'
+    else:
+        return 'Silver'
+
+
+print(raceresults(6, 5, 7, 3))
